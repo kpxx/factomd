@@ -8,8 +8,8 @@ import (
 	"bytes"
 	"encoding/binary"
 	"fmt"
-	"github.com/FactomProject/factomd/modules/leader"
 	controlpanel "github.com/FactomProject/factomd/controlPanel"
+	"github.com/FactomProject/factomd/modules/leader"
 	"os"
 	"reflect"
 	"sync"
@@ -153,7 +153,7 @@ func NetStart(w *worker.Thread, p *globals.FactomParams, listenToStdin bool) {
 	startNetwork(w, p)
 	startFnodes(w)
 	startWebserver(w)
-	startControlPanel(w)
+	//startControlPanel(w)
 	simulation.StartSimControl(w, p.ListenTo, listenToStdin)
 }
 
